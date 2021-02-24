@@ -2,15 +2,15 @@ package com.example.hotelmanager.model;
 
 public class Client {
 
-    private int numPass;
+    private String numPass;
     private String firstName;
     private String lastName;
 
-    public int getNumPass() {
+    public String getNumPass() {
         return numPass;
     }
 
-    public void setNumPass(int numPass) {
+    public void setNumPass(String numPass) {
         this.numPass = numPass;
     }
 

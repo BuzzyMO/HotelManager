@@ -3,6 +3,8 @@
 *.iml
 *.iws
 
+database.properties
+
 # Maven
 log/
 target/
