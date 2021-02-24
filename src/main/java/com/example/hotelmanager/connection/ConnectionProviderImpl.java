@@ -18,7 +18,7 @@ public class ConnectionProviderImpl implements ConnectionProvider{
     @Override
     public Connection getConnection() throws SQLException{
         Properties properties = new Properties();
-        try(InputStream in = Files.newInputStream(Paths.get("database.properties"))){
+        try(InputStream in = Files.newInputStream(Paths.get("src","main", "resources", "database.properties"))){
             properties.load(in);
         } catch (IOException ex){
             logger.fatal("Unable to open or read file", ex);
