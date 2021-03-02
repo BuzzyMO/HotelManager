@@ -1,6 +1,8 @@
 package com.example.hotelmanager.service;
 
+import com.example.hotelmanager.connection.ConnectionProvider;
 import com.example.hotelmanager.dao.RoomDao;
+import com.example.hotelmanager.dao.RoomDaoImpl;
 import com.example.hotelmanager.model.Room;
 
 import java.util.List;
@@ -9,8 +11,8 @@ public class RoomServiceImpl implements RoomService{
 
     private final RoomDao roomDao;
 
-    public RoomServiceImpl(RoomDao roomDao) {
-        this.roomDao = roomDao;
+    public RoomServiceImpl() {
+        this.roomDao = new RoomDaoImpl();
     }
 
     @Override

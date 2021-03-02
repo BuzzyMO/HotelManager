@@ -1,6 +1,7 @@
 package com.example.hotelmanager.dao;
 
 import com.example.hotelmanager.connection.ConnectionProvider;
+import com.example.hotelmanager.connection.ConnectionProviderImpl;
 import com.example.hotelmanager.model.Client;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,8 +16,8 @@ public class ClientDaoImpl implements ClientDao{
 
     private final ConnectionProvider conProvider;
 
-    public ClientDaoImpl(ConnectionProvider conProvider){
-        this.conProvider = conProvider;
+    public ClientDaoImpl(){
+        this.conProvider = new ConnectionProviderImpl();
     }
 
     @Override

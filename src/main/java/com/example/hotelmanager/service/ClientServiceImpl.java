@@ -1,6 +1,8 @@
 package com.example.hotelmanager.service;
 
+import com.example.hotelmanager.connection.ConnectionProvider;
 import com.example.hotelmanager.dao.ClientDao;
+import com.example.hotelmanager.dao.ClientDaoImpl;
 import com.example.hotelmanager.model.Client;
 
 import java.util.List;
@@ -9,8 +11,8 @@ public class ClientServiceImpl implements ClientService{
 
     private final ClientDao clientDao;
 
-    public ClientServiceImpl(ClientDao clientDao) {
-        this.clientDao = clientDao;
+    public ClientServiceImpl() {
+        this.clientDao = new ClientDaoImpl();
     }
 
     @Override

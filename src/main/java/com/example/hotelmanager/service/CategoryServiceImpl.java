@@ -1,6 +1,8 @@
 package com.example.hotelmanager.service;
 
+import com.example.hotelmanager.connection.ConnectionProvider;
 import com.example.hotelmanager.dao.CategoryDao;
+import com.example.hotelmanager.dao.CategoryDaoImpl;
 import com.example.hotelmanager.model.Category;
 
 import java.util.List;
@@ -9,8 +11,8 @@ public class CategoryServiceImpl implements CategoryService{
 
     private final CategoryDao categoryDao;
 
-    public CategoryServiceImpl(CategoryDao categoryDao){
-        this.categoryDao = categoryDao;
+    public CategoryServiceImpl(){
+        this.categoryDao = new CategoryDaoImpl();
     }
 
     @Override

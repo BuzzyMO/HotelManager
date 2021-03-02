@@ -1,6 +1,8 @@
 package com.example.hotelmanager.service;
 
+import com.example.hotelmanager.connection.ConnectionProvider;
 import com.example.hotelmanager.dao.AccommodationDao;
+import com.example.hotelmanager.dao.AccommodationDaoImpl;
 import com.example.hotelmanager.model.Accommodation;
 
 import java.util.List;
@@ -9,8 +11,8 @@ public class AccommodationServiceImpl implements AccommodationService{
 
     private final AccommodationDao acDao;
 
-    public AccommodationServiceImpl(AccommodationDao acDao){
-        this.acDao = acDao;
+    public AccommodationServiceImpl(){
+        this.acDao = new AccommodationDaoImpl();
     }
 
     @Override
